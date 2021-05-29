@@ -39,8 +39,7 @@ public class FetchBook extends AsyncTask<String,Void,String> {
             // Look for results in the items array, exiting
             // when both the title and author
             // are found or when all items have been checked.
-            while (i < itemsArray.length() &&
-                    (authors == null && title == null)) {
+            while (i < itemsArray.length() && (authors == null && title == null)) {
                 // Get the current item information.
                 JSONObject book = itemsArray.getJSONObject(i);
                 JSONObject volumeInfo = book.getJSONObject("volumeInfo");
